@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.JobApplicationController">
+   <top>
+      <MenuBar>
+        <menus>
+          <Menu text="File">
+            <items>
+              <MenuItem text="Exit" onAction="#handleExit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox spacing="10" style="-fx-padding: 20;">
+         <children>
+            <Label text="Employee Name:" />
+            <TextField fx:id="fullNameField" />
+            <Label text="Review Date:" />
+            <DatePicker fx:id="datePicker" />
+            <Button text="Upload Photo" onAction="#handleUploadPhoto" />
+            <ImageView fx:id="empImageView" fitHeight="100" fitWidth="100" preserveRatio="true" />
+            <Label text="Performance Comments:" />
+            <TextArea fx:id="commentsArea" />
+            <Label text="Font Size:" />
+            <Slider fx:id="fontSlider" min="10" max="30" value="14" onMouseDragged="#handleSlider" />
+            <HBox spacing="10" alignment="CENTER">
+               <Button text="Save Review" onAction="#handleSave" style="-fx-background-color: green; -fx-text-fill: white;" />
+               <Button text="Clear" onAction="#handleClear" />
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
